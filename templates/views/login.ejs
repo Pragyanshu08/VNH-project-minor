@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cssanimation.io/css/cssanimation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" integrity="sha512-T7lIYojLrqj7eBrV1NvUSZplDBi8mFyIEGFGdox8Bic92Col3GVrscbJkL37AJoDmF2iAh81fRpO4XZukI6kbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <div class="feedsection" >
+        <div class="cards "  >
+            <div class="profilecard cardo tilt "  data-tilt >
+                 <div class="dp">
+                    <div class="profilepic"></div>
+                    <h1> <b>  <%= name %> </b> </h1>
+                    <h3><%= email %></h3>
+                    <h3><%= enrollment %></h3>
+                    <p>CSE'26|Aspiring Developer 🚀 | Learning the art of coding | 💻✨ </p>
+                 </div>
+                 <hr><hr>
+                 <div class="middle">
+                    <h1>Notes Uploaded &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10 </h1>
+                    <h1>Resource Downloaded &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 100 </h1>
+                 </div>
+                 <hr><hr>
+                 <div class="lower">
+                    <button id="create-post-btn">Create Post</button>
+                 </div>
+                 
+            </div>
+            
+            <div class="cardo feedcard">
+                <div class="createpost">
+                  <h1>WELCOME ,<b><%= name %></b></h1>
+                  <p><%= quote %></p>
+                </div>
+                <hr><hr><hr><hr>
+
+
+                <% if (posts && posts.length > 0) { %>
+                    <div class="posts-container">
+                        <% posts.forEach(post => { %>
+                            <div class="posts">
+                                <div class="uppercontent">
+                                    <div class="profilepic">
+                                    
+                                    </div>
+                                    <div class="person-detail">
+                                        <p><strong><%= post.nameOfPostCreator %></strong></p>
+                                        <p><%= post.enrollmentOfPostCreator %> / <%= post.departmentOfPostCreator %> / <%= post.yearOfPostCreator %> year</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="caption">
+                                    <p><%= post.caption %></p>
+                                </div>
+                                <% if (post.imageUrl) { %>
+                                    <img src="<%= post.imageUrl %>" alt="Post Image" />
+                                <% } %>
+                            </div>
+                        <% }); %>
+                    </div>
+                <% } 
+                else { %>
+                    <p>No posts available</p>
+                <% } %>
+                
+                
+                
+
+
+            </div>
+
+            <div class="adscard cardo">
+                  <div class="heading"> <h1><b>POPULAR NOTES IN VITS</b></h1> </div> 
+                  <hr>
+                  <div class="noteslist">
+                    <h1> <a href="">SE  (by Neeraj sir)</a> </h1>
+                    <h1> <a href="">DSA (by Abhinav sir)</a> </h1>
+                    <h1> <a href="">Discrete Maths (by SOMA ma'am)</a> </h1>
+                    <h1> <a href="">M2  (by SOMA ma'am)</a> </h1>
+                    <h1> <a href="">TOC (by Pradeep sir)</a> </h1>
+                    <h1> <a href="">CS  (by Neelesh sir)</a> </h1>
+                    <h1> <a href="">ADA (by Abhinav sir)</a> </h1>
+                    <h1> <a href="">JAVA (by Dhirendra sir)</a> </h1>
+                  </div> <hr>
+                  <div class="lower">
+
+                  </div>
+
+            </div>
+        </div>
+        
+
+        <div class="popup hidden w-[50%] lg:w-[40%] h-[50vh] bg-[#dcd8d0] absolute top-5 z-5 flex flex-col mx-[10%] lg:ml-[30%]  rounded-3xl"> 
+            <div class="button-div w-full h-12 flex justify-end ">
+              <h1 class="text-[black] text-[1.5rem] lg:text-[2rem]  p-5 pt-3"><b>CREATE A POST</b></h1>
+              <button class="cancel text-black m-2"><i class="ri-close-large-line"></i></button>
+            </div>
+            <div class="inputdiv  w-full h-[90%]">
+                <div class="create-post-form">
+                  <form action="/createPost" method="post" class="loginForm flex flex-col items-center mt-10 lg:mt-[40%]" enctype="multipart/form-data">
+                   
+                   CAPTION:<input type="text" name="caption" placeholder="Caption for your post" required><br>
+                    <input type="file" name="image" accept="image/*"><br>
+                    <button type="submit" class="post">Post</button>
+                </form>
+                
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+   
+
+    <script src="ejsScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        VanillaTilt.init(document.querySelectorAll(".tilt"), {
+            max: 15,
+            speed: 300,
+            glare: true,
+            "max-glare": 0.5,
+            perspective: 1000,    
+            scale: 1.1,          
+            reverse: false,       
+            easing: "cubic-bezier(.03,.98,.52,.99)"
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

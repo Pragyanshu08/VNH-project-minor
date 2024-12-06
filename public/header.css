@@ -1,0 +1,40 @@
+.logo img:hover{
+    filter: drop-shadow(0 0 20px #00ffff );
+    -webkit-filter: drop-shadow(0 0 20px #00ffff );
+}
+
+
+
+nav{
+    backdrop-filter: blur(10px);
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+    position: sticky;
+    top: 0%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
+  }
+  
+  nav:hover{
+    backdrop-filter: blur(20px);
+  }
+  
+  .navitems a {
+    margin-left: 2.5rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+    font-family: myfont;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: black;
+  }
+  
+  .navitems a:hover {
+    color: black;
+    filter: drop-shadow(0 0 10px #00ffff);
+    -webkit-filter: drop-shadow(0 0 10px #00ffff);
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    transform: scale(1.3);
+  } 

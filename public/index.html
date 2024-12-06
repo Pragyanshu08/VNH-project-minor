@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSNotesHub</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cssanimation.io/css/cssanimation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" integrity="sha512-T7lIYojLrqj7eBrV1NvUSZplDBi8mFyIEGFGdox8Bic92Col3GVrscbJkL37AJoDmF2iAh81fRpO4XZukI6kbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+</head>
+<body>
+    <div class="preloader absolute bg-black text-white h-screen w-full z-20" >
+        <h1 class="text-8xl text-center w-full absolute my-[20%]" >VITS Notes Hub</h1>
+        <p class="text-4xl text-center w-full absolute my-[27%]">Unlock the power of perfect notes</p>
+    </div>
+    <div class="wrapper h-[570vh] lg:h-[530vh] w-full absolute -z-10 opacity-0 bg-black">
+
+        <section class="section1 landing-page h-screen">
+            <video autoplay loop muted playsinline class="background-video absolute top-0 left-0 w-full h-screen object-cover opacity-50">
+                <source src="/assets/BG_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+           <nav class="h-20 w-full z-10 top-0 py-2 relative">
+                <div class="logo h-20 w-20 absolute left-3 lg:left-8">
+                    <a href="#"><img src="/assets/logo.png" alt="logo"></a>
+                </div>
+                
+                <button class="menu block md:hidden absolute text-2xl right-0 m-4"><i class="ri-menu-line"></i></button>
+                <div class="navitems hidden md:block text-white absolute my-4 right-10">
+                    <a href="#">Home</a>
+                    <a href="#tutorials">Tutorials</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button button class="close hidden absolute text-2xl right-0 m-4 z-10"><i class="ri-close-large-line"></i></button>
+                <div class="smallnav hidden navitems h-[50vh] w-full items-center gap-10 pt-28 z-20 flex flex-col opacity-70 bg-black">
+                    <a href="#">Home</a>
+                    <a href="#tutorials">Tutorials</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+
+
+            <div class="flex flex-col lg:flex-row h-[90%] w-full lg:items-center justify-around relative ">
+                <div class=" inner1 lg:w-[60%] w-full lg:h-full flex flex-col items-start justify-center p-[2em] lg:pl-[8em] lg:pt-[6em]" >
+                    <div class="upper h-[50%]">
+                        <h1 class="text-5xl lg:text-8xl"><span class="text-[#2f8eef]">V</span>ITS <span class="text-[#2f8eef]">N</span>otes<span class="text-[#2f8eef]">H</span>ub</h1>
+                        <p class="p-3 text-[0.9em] lg:text-2xl"><span>A <span class="text-[#b8d400]"> digital notebook </span>that allows users to <br> organize notes in a flexible, <br> freeform manner. </span></p>
+                    </div>
+                    <div class="lower text-xs lg:text-xl mt-24 lg:mt-0" >
+                        <p>DEVELOPERS :<br> <br>
+
+                          <span id="typed-devs" class="dev text-blue-500 block mt-1"></span>
+
+                            <!-- <span  class="dev text-blue-500 block mt-1">Pragyanshu Tiwari</span>
+                            <span  class="dev text-blue-500 block mt-1" >Rakesh Raikwar </span>
+                            <span  class="dev text-blue-500 block mt-1" >Shrivesh Gupta </span>
+                            <span  class="dev text-blue-500 block mt-1" >Rahul Gautam </span> -->
+                        </p>
+                    </div>
+                </div>
+                <div class="inner2 w-full lg:w-[50%] lg:h-full flex lg:flex-col items-center justify-center lg:justify-end -mt-28 lg:mt-0 py-36">
+                  <span>
+                    <button class="login bg-transparent text-white px-[2em] mr-2 lg:mr-10">LOGIN</button>
+                    <button class="signup bg-transparent text-white px-[2em] mr-2 lg:mr-10">SIGNUP</button>
+                  </span>
+                </div>
+            </div>
+
+            <div class="popup hidden w-[80%] lg:w-[40%] h-[75vh] bg-[#dcd8d0] absolute top-5 z-10 flex flex-col mx-[10%] lg:ml-[30%] mt-[20%] lg:mt-[5%] rounded-3xl"> 
+                <div class="button-div w-full h-12 flex justify-end ">
+                  <h1 class="text-[#16a5af] text-[1.5rem] lg:text-[2rem] mr-[18%] lg:mr-[35%] p-5 pt-3"><b>LOGIN</b></h1>
+                  <button class="cancel text-black m-2"><i class="ri-close-large-line"></i></button>
+                </div>
+                <div class="inputdiv flex lg:flex-row flex-col w-full h-[90%]">
+                    <div class="left w-full lg:w-[50%] h-full px-8 lg:px-2">
+                      <form action="/login" method="post" class="loginForm flex flex-col items-center mt-10 lg:mt-[40%]">
+                        <label for="username">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="Enter email" required>
+                        
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter password" required>
+                        
+                        <button class="login_button" type="submit">Login</button>
+                        <p class="text-black">Don't have an account? 
+                            <a  class="login_to_signup text-[#16a5af] cursor-pointer">Signup</a>
+                        </p>
+                    </form>
+                    
+                    </div>
+                    <div class="right w-[90%] lg:w-[50%] ml-3 lg:ml-0 mt-0 lg:mt-24 h-[80%]">
+                      <video autoplay loop muted playsinline class="w-full h-full">
+                        <source src="assets/login1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                </div>
+              </div>
+    
+    
+              <div class="popup_sigup hidden w-[80%] lg:w-[50%] h-[80vh] lg:h-[75vh] bg-white absolute top-5 z-10 flex flex-col mx-[10%] lg:ml-[25%] mt-[20%] lg:mt-[5%] rounded-3xl"> 
+                <div class="button-div w-full h-12 flex justify-end pr-3">
+                  <h1 class="text-[#16a5af] text-[1.5rem] mr-[15%] lg:mr-[35%] p-5 pt-2 lg:pt-3"><b>SIGNUP </b></h1>
+                  <button class="cancel2 text-black lg:m-2"><i class="ri-close-large-line"></i></button>
+                </div>
+    
+                <div class="head text-center bg-[#2a9d8f] mt-2">
+                  <h2>Create Your Account</h2>
+                  <p>Sign up to access and share resources with classmates.</p>
+                </div> 
+    
+                <div class="inputdiv1 flex">
+                  <div class="left h-[80%] w-full lg:w-[60%] flex flex-col text-black p-[5%] lg:py-[2%] lg:px-[5%]">
+                    <form action="/registers" method="post" class="signup-form flex flex-col justify-center items-left gap-1">
+                      <div class="form-group text-xs lg:text-xl">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" placeholder="Enter your full name" name="name" required>
+                      </div>
+                    
+                      <div class="form-group text-xs lg:text-xl">
+                        <label for="enroll">Enrollment:</label>
+                        <input name="enrollment" type="text" id="enroll" placeholder="Enter Enrollment" required>
+                      </div>
+                    
+                      <div class="form-group text-xs lg:text-xl">
+                        <label for="email">Email Address:</label>
+                        <input name="email" type="email" id="email" placeholder="Enter your email" required>
+                      </div>
+                    
+                      <div class="form-group text-xs lg:text-xl">
+                        <label for="Department">Department:</label>
+                        <select name="department" id="Department" required>
+                          <option value="">Select your Department</option>
+                          <option value="CSE">Computer Science & Engineering</option>
+                          <option value="ME">Mechanical Engineering</option>
+                          <option value="EE">Electrical Engineering</option>
+                        </select>
+                      </div>
+                    
+                      <div class="form-group text-xs lg:text-xl">
+                        <label for="Year">Year:</label>
+                        <select name="year" id="Year" required>
+                          <option value="">Year</option>
+                          <option value="I">I</option>
+                          <option value="II">II</option>
+                          <option value="III">III</option>
+                          <option value="IV">IV</option>
+                        </select>
+                      </div>
+                    
+                      <div class="form-group text-xs lg:text-xl">
+                        <label for="password">Password:</label>
+                        <input name="password" type="password" id="password" placeholder="Create a password" required>
+                      </div>
+                    
+                      <div class="form-group text-xs lg:text-xl">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input name="confirmPassword" type="password" id="confirm-password" placeholder="Confirm your password" required>
+                      </div>
+                    
+                      <button class="formBtn" type="submit">Submit</button>
+                      <p class="text-xs lg:text-xl items-center ml-14">
+                        Already have an account! <a class="signup_to_login text-[#16a5af] cursor-pointer">LogIn</a>
+                      </p>
+                    </form>
+                    
+                  </div>
+    
+                <div class="hidden lg:block right h-[70%] ">
+                    <video autoplay loop muted playsinline class="w-full h-full mt-16">
+                      <source src="assets/signupVdo.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="tutorials" class="h-[100vh]"> 
+          <h1> Tutorials </h1>
+          <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <video autoplay loop muted src="./assets/signup.mp4" alt="">
+                </div>
+                <div class="item">
+                    <video autoplay loop muted src="./assets/login.mp4" alt="">
+                </div>
+                <div class="item">
+                    <video autoplay loop muted src="./assets/create_post.mp4" alt="">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        </section>
+       
+        <section id="about" class="h-[100vh] p-[10%]" >
+          <div class="about_block border-y-2 w-full lg:h-70% lg:h-80% lg:flex" data-aos="flip-down">
+            <h1 class="lg:hidden text-3xl text-[#2f73a0] font-extrabold underline-offset-8 underline text-center lg:text-start mb-[5%]">About Us</h1>
+            <img class="rounded-[50%] px-[12%] lg:px-[10%] py-[5%]" src="assets/team.jpg" alt="">
+            <div class="description text-justify lg:text-3xl w-full my-[5%] mr-5 px-2" >
+              <h1 class="lg:block hidden text-3xl text-[#2f73a0] font-extrabold underline-offset-8 underline mb-[5%]">About Us</h1>
+              Welcome to VITS NotesHub – your personal study companion designed to help students for study material and exams, to achieve their academic. VITS NotesHub is here to guide you every step of the way.
+              Our mission is to make learning efficient and enjoyable by offering tools that simplify the study process. Which is why we’ve developed VITSNotesHub to streamline your study sessions and boost productivity.
+              <a href="./about.html"><div class="button w-[70%] lg:w-[22%] mt-[10%] ml-[20%] text-center lg:ml-[70%] text-xl px-8 py-2">Read More<i class="ri-arrow-right-s-line"></i></div></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="lg:flex h-[100vh] w-screen py-[5%] px-[5%] lg:px-[12%]">
+
+          <div class="cleft w-full lg:w-[45em] h-[40%] lg:h-[80%] ">
+            <h1 class="text-[2.8em] lg:text-[500%]">Connect with <br>our team</h1>
+            <p class="text-xl lg:text-2xl">Our team is happy to answer your questions about our VITSNotesHub.</p>
+            <img class="h-[60%] lg:mt-10 mx-[20%] lg:ml-[2%]" src="assets/contact us.png" alt="">
+          </div>
+          <div class="cright bg-[#1d1c1c] h-[60%] lg:h-[95%] w-full lg:w-[40%] flex flex-col rounded-3xl px-12 py-3 lg:py-14" data-aos="flip-left">
+            <form action="/sendmail" method="post">
+              <label for="name">Name:</label>
+              <input name="name" type="text" id="name" placeholder="Type your name here..." required >
+              
+              <label for="email">From:</label>
+              <input name="from" type="email" id="email" placeholder="example@gmail.com" required>
+             
+              <label for="email">To:</label>
+              <input name="to" type="email" id="email" placeholder="example@gmail.com" required>
+                  
+             
+
+              <label for="department">Department:</label>
+              <select name="department" id="department" aria-placeholder="Select Department" required>
+                <option value="">Select Department</option>
+                <option value="CSE">Computer Science and Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="EE">Electrical Engineering</option>
+              </select>
+             
+              <label for="phone">Phone No.:</label>
+              <div class="phone flex flex-row">
+                <select name="phone_prefix" id="phone">
+                  <option value="">+91</option>
+                  <option value="">+92</option>
+                  <option value="">+93</option>
+                  <option value="">+355</option>
+                  <option value="">+213</option>
+                  <option value="">+376</option>
+                  <option value="">+244</option>
+                  <option value="">+672</option>
+                  <option value="">+54</option>
+                  <option value="">+374</option>
+                </select>
+                <input name="phone" type="text" id="phone" placeholder="Mobile no." required >
+              </div>
+              
+              <label for="subject">Subject:</label>
+              <input name="subject" type="text" id="subject" placeholder="enter subject" required >
+      
+              <label for="message">Message</label>
+              <input name="msg" type="text" id="message" placeholder="Enter your message" required>
+              
+              <button class="text-white bg-[#00ffff] w-[40%] py-1 mt-2 text-2xl rounded-3xl" type="submit">Submit</button>
+          </form>
+          </div>
+        </section>
+
+        <section id="technology" class="sm:h-[60vh] py-[40%] lg:py-4">
+            <h1 class="text-center text-2xl lg:text-5xl lg:mt-[7%] font-[myfont]"> Technologies we used</h1>
+            <div class='tech flex flex-row pt-[2em] justify-center'>
+              <div id="html" >
+                <img src="assets/html.png" alt="">
+                <h2 class="html absolute hidden text-[8em] lg:text-[20em] font-serif opacity-10 top-[81%] lg:top-[79%] left-1 lg:left-[25%]">HTML</h2>
+              </div>
+              <div id="css">
+                <img src="assets/css.png" alt="">
+                <h2 class="css absolute hidden text-[8em] lg:text-[20em] font-serif opacity-10 top-[81%] lg:top-[79%] left-16 lg:left-[35%]">CSS</h2>
+              </div>
+              <div id="javascript" >
+                <img src="assets/js.png" alt="">
+                <h2 class="js absolute hidden text-[3.8em] lg:text-[18em] font-serif opacity-10 top-[82%] lg:top-[80%] left-1 lg:left-[5%]">JAVASCRIPT</h2>
+              </div>
+              <div id="database" >
+                <img src="assets/db.png" alt="">
+                <h2 class="db absolute hidden text-[4.5em] lg:text-[20em] font-serif opacity-10 top-[82%] lg:top-[79%] left-1 lg:left-[7%]">DATABASE</h2>
+              </div>
+              <div id="node" >
+                <img src="assets/nodejs.png" alt="">
+                <h2 class="node absolute hidden text-[8em] lg:text-[20em] font-serif opacity-10 top-[81%] lg:top-[79%] left-0 lg:left-[25%]">NODE</h2>
+              </div>
+            </div>
+        </section>
+
+        <section id="footer" class="absolute bottom-0 h-[100vh] lg:h-[60vh] w-full">
+          <div class="waves hidden lg:block">
+            <div class="wave" id="wave"></div>
+            <div class="wave" id="wave"></div>
+            <div class="wave" id="wave"></div>
+            <div class="wave" id="wave"></div>
+          </div>
+          <div class="row bg-[#0099ff] h-[80%] w-full absolute -bottom-28 flex flex-col lg:flex-row text-black text-center items-center list-none lg:justify-between px-[5%] py-2 lg:py-[4%]">
+            <div class="col">
+              <h1>About</h1>
+              <p class="mt-[1em] text-[1em] font-semibold"> Your personal study companion designed <br> to help students for study material and <br> exams, to achieve their academics.</p>
+            </div>
+            <div class="col mb-4 lg:mb-0">
+              <h1>Quick Links</h1>
+              <a href="#"><li>Home</li></a>
+              <a href="#about"><li>About</li></a>
+              <a href="#contact"><li>Contact</li></a>
+              <a href="#tutorials"><li>Tutorials</li></a>
+              <a href=""><li>Feedback</li></a>
+            </div>
+            <div class="col mb-4 lg:mb-0">
+              <h1>Legals</h1>
+              <a href=""><li>Terms</li></a>
+              <a href=""><li>Privacy</li></a>
+              <a href=""><li>Licenses</li></a>
+              <a href=""><li>Cookies</li></a>
+              <a href=""><li>Settings</li></a>
+            </div>
+            <div class="col">
+              <h1>Social</h1>
+              <a href=""><img src="assets/footer/facebook.png" alt="Facebook"></a>
+              <a href=""><img src="assets/footer/instagram.png" alt="Instagram"></a>
+              <a href=""><img src="assets/footer/linkedin.png" alt="Linkdin"></a>
+              <a href=""><img src="assets/footer/whatsapp.png" alt="Whatsapp"></a>
+            </div>
+            <p class="absolute bg-[#035287] w-full left-0 py-1 text-center text-white z-10 bottom-0" id="bottom">@ 2024 || All rights reserved by VITSNotesHub</p>
+          </div>
+        </section>
+
+    </div>        <!-- Wrapper class closing -->
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="tutorial.js"></script>
+    
+    <script>
+      AOS.init({
+        offset:500,
+        duration:1000,
+        delay: 8,
+      });
+    </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+
+    
+    new Typed("#typed-devs", {
+      strings: [
+        "Pragyanshu Tiwari",
+        "Rakesh Raikwar",
+        "Shrivesh Gupta",
+        "Rahul Gautam"
+      ],
+      typeSpeed: 80,    // Typing speed for developer names
+      backSpeed: 40,    // Backspace speed for developer names
+      backDelay: 500,   // Delay before starting to backspace
+      startDelay: 500,  // Delay before starting to type the first name
+      showCursor: false, // Show the typing cursor
+      loop: true,      // Don't loop after typing all names
+    });
+
+
+  });
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <nav class="h-20 w-full z-10 top-0 py-2  header">
+        <div class="logo h-20 w-20 absolute left-3 lg:left-8">
+            <a href="#"><img src="/assets/logoDark.png" alt="logo"></a>
+        </div>
+        
+        <button class="menu block md:hidden absolute text-2xl right-0 m-4"><i class="ri-menu-line"></i></button>
+        <div class="navitems hidden md:block text-white absolute my-4 right-10">
+            <a href="/">Home</a>
+            <a href="/tutorials">Resources</a>
+            <a href="/about">Upload</a>
+            <a href="/old-question-papers">Old question papers</a>
+            <a href="/contact"> <%= name %> </a>
+            <a href="/logout">LOGOUT</a>
+        </div>
+       
+   
+    </nav>
+    
+</body>
+</html>
