@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cssanimation.io/css/cssanimation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" integrity="sha512-T7lIYojLrqj7eBrV1NvUSZplDBi8mFyIEGFGdox8Bic92Col3GVrscbJkL37AJoDmF2iAh81fRpO4XZukI6kbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
     <%- include('../partials/header.ejs') %>
@@ -36,8 +36,9 @@
             
             <div class="cardo feedcard">
                 <div class="createpost">
-                  <h1>WELCOME ,<b><%= name %></b></h1>
+                  <h1>WELCOME , <span id="typed-name"></span></h1>
                   <p><%= quote %></p>
+                  
                 </div>
                 <hr><hr><hr><hr>
 
@@ -129,15 +130,37 @@
             speed: 300,
             glare: true,
             "max-glare": 0.5,
-            perspective: 1000,    
-            scale: 1.1,          
-            reverse: false,       
+            perspective: 1000,
+            scale: 1.1,
+            reverse: false,
             easing: "cubic-bezier(.03,.98,.52,.99)"
         });
     });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
 
+    const name = "<%=name %>"
+    new Typed("#typed-name", {
+        
+      strings: [
+        `<b>${name}</b>`,
+        "<b>to the VITSNotesHub platform</b>",
+        "<b>Enjoy exploring!</b>"
+      ],
+      typeSpeed: 80,    // Typing speed for developer names
+      backSpeed: 40,    // Backspace speed for developer names
+      backDelay: 500,   // Delay before starting to backspace
+      startDelay: 500,  // Delay before starting to type the first name
+      showCursor: false, // Show the typing cursor
+      loop: false,      // Don't loop after typing all names
+    });
+
+
+  });
+</script>
 
 
 

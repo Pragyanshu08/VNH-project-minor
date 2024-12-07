@@ -54,6 +54,10 @@
    padding: 10px;
 }
 
+.feedcard:hover{
+    box-shadow: #16a5af 0px 10px 50px, #16a5af 0px -12px 30px, #16a5af 0px 4px 6px, #16a5af 0px 0px 0px,  0px -3px 5px;
+}
+
 .feedcard .createpost{
     width: 100%;
     height: 15vh;
@@ -122,6 +126,8 @@
     -o-border-radius: 50%;
 }
 
+ 
+
 
 
 
@@ -140,6 +146,12 @@
 }
 .popup h1{
     margin-right: 27%;
+}
+
+
+.profilecard:hover{
+    box-shadow: #16a5af 0px 10px 50px, #16a5af 0px -12px 30px, #16a5af 0px 4px 6px, #16a5af 0px 0px 0px,  0px -3px 5px;
+   
 }
 
 
@@ -226,6 +238,10 @@
     overflow-y: scroll;
   }  
 
+
+  .adscard:hover{
+    box-shadow: #16a5af 0px 10px 50px, #16a5af 0px -12px 30px, #16a5af 0px 4px 6px, #16a5af 0px 0px 0px,  0px -3px 5px;
+  }
 
 .adscard .heading{
     width: 100%;
