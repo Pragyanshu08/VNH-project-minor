@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF</title>
+    <link rel="stylesheet" href="upload.css">  <!-- Add your custom CSS here -->
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a PDF</h1>
+        <form action="/pdf/upload" method="POST" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            
+            <select name="year" required>
+              <option value="">Select Year</option>
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+            </select>
+          
+            <input type="file" name="resource" accept="application/pdf" required>
+            <button type="submit">Upload</button>
+          </form>
+          
+    </div>
+</body>
+</html>
